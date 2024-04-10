@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 14:00:32 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/04/10 12:13:14 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/04/10 12:24:05 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,29 +62,6 @@ char	*ft_strjoin(char *s1, char *s2)
 	}
 	new_str[i + j] = 0;
 	return (new_str);
-}
-
-char	*ft_strdup(const char *src)
-{
-	int			length;
-	const char	*src_ptr = src;
-	char		*dest;
-	const char	*src_ptr2 = src;
-	char		*dest_ptr;
-
-	length = ft_strlen(src_ptr);
-	dest = (char *)malloc((length + 1) * sizeof(char));
-	if (dest == NULL)
-		return (NULL);
-	dest_ptr = dest;
-	while (*src_ptr2 != '\0')
-	{
-		*dest_ptr = *src_ptr2;
-		src_ptr2++;
-		dest_ptr++;
-	}
-	*dest_ptr = '\0';
-	return (dest);
 }
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
