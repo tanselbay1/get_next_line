@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 14:00:32 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/04/10 11:47:51 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/04/10 12:02:15 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,25 @@ char	*ft_strjoin(char *s1, char *s2)
 	}
 	new_str[i + j] = 0;
 	return (new_str);
+}
+
+char	*ft_substr(const char *s, unsigned int start, size_t len)
+{
+	size_t	s_len;
+	char	*substring;
+	size_t	end;
+
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+		return (ft_strdup(""));
+	end = start + len;
+	if (end > s_len)
+		end = s_len;
+	substring = malloc(end - start + 1);
+	if (!substring)
+		return (NULL);
+	ft_strlcpy(substring, s + start, end - start + 1);
+	return (substring);
 }
