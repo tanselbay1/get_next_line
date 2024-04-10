@@ -6,14 +6,11 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 15:07:44 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/04/01 15:25:49 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/04/10 12:21:48 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "get_next_line.h"
 
 int	main(void)
 {

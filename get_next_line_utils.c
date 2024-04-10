@@ -6,9 +6,11 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 14:00:32 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/04/10 12:05:45 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/04/10 12:13:14 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "get_next_line.h"
 
 char	ft_strlen(char *str)
 {
