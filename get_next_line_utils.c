@@ -6,13 +6,13 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 14:00:32 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/04/11 10:56:35 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/04/11 12:06:38 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -83,7 +83,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (i);
 }
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char	*ft_substr(char *s, unsigned int start, size_t len)
 {
 	size_t	s_len;
 	char	*substring;
@@ -102,21 +102,4 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		return (NULL);
 	ft_strlcpy(substring, s + start, end - start + 1);
 	return (substring);
-}
-static char	*ft_strchr(char *s, int c)
-{
-	unsigned int i;
-	char cc;
-
-	cc = (char)c;
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == cc)
-			return ((char *)&s[i]);
-		i++;
-	}
-	if (s[i] == cc)
-		return ((char *)&s[i]);
-	return (NULL);
 }
