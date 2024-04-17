@@ -6,7 +6,7 @@
 /*   By: tbayrakt <tbayrakt@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 15:07:44 by tbayrakt          #+#    #+#             */
-/*   Updated: 2024/04/16 11:53:42 by tbayrakt         ###   ########.fr       */
+/*   Updated: 2024/04/17 09:42:53 by tbayrakt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,19 +109,29 @@ static char	*ft_strchr(char *s, int c)
 	return (NULL);
 }
 
+// #include "get_next_line.h"
+// #include <fcntl.h>
+// #include <stdio.h>
+
 // int	main(void)
 // {
 // 	int		fd;
 // 	char	*line;
-// 	int		num_line;
 
-// 	num_line = 1;
+// 	// Open a file for reading
 // 	fd = open("test.txt", O_RDONLY);
-// 	while ((line = get_next_line(fd)))
+// 	if (fd == -1)
 // 	{
-// 		printf("%d: %s\n", num_line++, line);
-// 		free(line);
+// 		perror("Error opening file");
+// 		return (1);
 // 	}
+// 	// Read lines from the file using get_next_line
+// 	while ((line = get_next_line(fd)) != NULL)
+// 	{
+// 		printf("%s\n", line);
+// 		free(line); // Free memory allocated by get_next_line
+// 	}
+// 	// Close the file descriptor
 // 	close(fd);
 // 	return (0);
 // }
